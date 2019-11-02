@@ -340,8 +340,8 @@ void MenuMiseEchelle() {
 
   void ProEnzy1() {
   Indio.setADCResolution(14);
-  Indio.analogReadMode(1, mA);
-  Indio.analogReadMode(2, mA);
+  Indio.analogReadMode(1, mA_p);
+  Indio.analogReadMode(2, mA_p);
   channel = 7;
   channelUpLimit = 7;
   channelLowLimit = 7;
@@ -396,8 +396,8 @@ void ProEnzy1Live(){ // Affichage valeur et graphique
 
   void ProEnzy2() {
   Indio.setADCResolution(14);
-  Indio.analogReadMode(1, mA);
-  Indio.analogReadMode(2, mA);
+  Indio.analogReadMode(1, mA_p);
+  Indio.analogReadMode(2, mA_p);
   channel = 7;
   channelUpLimit = 7;
   channelLowLimit = 7;
@@ -452,8 +452,8 @@ void ProEnzy2Live(){ // Affichage valeur et graphique
 
   void ProInEnz() {
   Indio.setADCResolution(14);
-  Indio.analogReadMode(1, mA);
-  Indio.analogReadMode(2, mA);
+  Indio.analogReadMode(1, mA_p);
+  Indio.analogReadMode(2, mA_p);
   channel = 7;
   channelUpLimit = 7;
   channelLowLimit = 7;
