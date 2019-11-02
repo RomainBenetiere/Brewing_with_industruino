@@ -300,8 +300,8 @@ void MenuMiseEchelle() {
   void ProEmpattageLive(){ // Affichage valeur et graphique
   lcd.setCursor(6, 0);
   lcd.print("Empattage");
-  Temp1=(Indio.analogRead(1))*150/100;
-  Temp2=(Indio.analogRead(2))*200/100;
+  Temp1=(Indio.analogRead(1))*150/100*1.0052+0.7893; // mise à l'échelle et correction
+  Temp2=(Indio.analogRead(2))*200/100*1.0065+1.164; // mise à l'échelle et correction
   if ((Temp1 >= 0 and Temp1 < (TempEmp - Hyst)) or (Temp2 >=0 and Temp2 < (TempEmp - Hyst))) {
     Indio.digitalWrite(1, HIGH); // Pompe 1
     Indio.digitalWrite(2, LOW); // Pompe 2
@@ -356,8 +356,8 @@ void MenuMiseEchelle() {
 void ProEnzy1Live(){ // Affichage valeur et graphique
   lcd.setCursor(6, 0);
   lcd.print("Test Enzyme 1");
-  Temp1=(Indio.analogRead(1))*150/100;
-  Temp2=(Indio.analogRead(2))*200/100;
+  Temp1=(Indio.analogRead(1))*150/100*1.0052+0.7893; // mise à l'échelle et correction
+  Temp2=(Indio.analogRead(2))*200/100*1.0065+1.164; // mise à l'échelle et correction
   if ((Temp1 >= 0 and Temp1 < (TempEz1 - Hyst)) or (Temp2 >=0 and Temp2 < (TempEz1 - Hyst))) {
     Indio.digitalWrite(1, HIGH); // Pompe 1
     Indio.digitalWrite(2, LOW); // Pompe 2
@@ -412,8 +412,8 @@ void ProEnzy1Live(){ // Affichage valeur et graphique
 void ProEnzy2Live(){ // Affichage valeur et graphique
   lcd.setCursor(6, 0);
   lcd.print("Test Enzyme 2");
-  Temp1=(Indio.analogRead(1))*150/100;
-  Temp2=(Indio.analogRead(2))*200/100;
+  Temp1=(Indio.analogRead(1))*150/100*1.0052+0.7893; // mise à l'échelle et correction
+  Temp2=(Indio.analogRead(2))*200/100*1.0065+1.164; // mise à l'échelle et correction
   if ((Temp1 >= 0 and Temp1 < (TempEz2 - Hyst)) or (Temp2 >=0 and Temp2 < (TempEz2 - Hyst))) {
     Indio.digitalWrite(1, HIGH); // Pompe 1
     Indio.digitalWrite(2, LOW); // Pompe 2
@@ -468,8 +468,8 @@ void ProEnzy2Live(){ // Affichage valeur et graphique
   void ProInEnzLive(){ // Affichage valeur et graphique
   lcd.setCursor(6, 0);
   lcd.print("Test Inactivation Enz");
-  Temp1=(Indio.analogRead(1))*150/100;
-  Temp2=(Indio.analogRead(2))*200/100;
+  Temp1=(Indio.analogRead(1))*150/100*1.0052+0.7893; // mise à l'échelle et correction
+  Temp2=(Indio.analogRead(2))*200/100*1.0065+1.164; // mise à l'échelle et correction
   if ((Temp1 >= 0 and Temp1 < (TempInZ - Hyst)) or (Temp2 >=0 and Temp2 < (TempInZ - Hyst))) {
     Indio.digitalWrite(1, HIGH); // Pompe 1
     Indio.digitalWrite(2, LOW); // Pompe 2
